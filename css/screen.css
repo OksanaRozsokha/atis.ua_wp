@@ -79,7 +79,7 @@ html, body {
 }
 
 body {
-  padding: 30px;
+  padding: 2vh 2vw;
   font: 16px "Roboto", sans-serif;
   display: -webkit-flex;
   display: flex;
@@ -109,10 +109,20 @@ h2 {
 .main-header {
   padding-top: 45px;
 }
+@media only screen and (max-width: 479px) {
+  .main-header .padding-btn {
+    padding: 10px 15px;
+  }
+}
 @media (max-width: 991px) {
   .main-header .container {
     position: relative;
-    padding-bottom: 55px;
+    padding-bottom: 65px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .main-header .container {
+    padding-bottom: 20px;
   }
 }
 
@@ -121,6 +131,18 @@ h2 {
     position: absolute;
     left: 0;
     bottom: 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .popup-btn {
+    left: 59%;
+    top: 0;
+    bottom: inherit;
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 14px;
   }
 }
 
@@ -170,6 +192,14 @@ h2 {
 }
 .menu-list a, .menu-list button {
   color: #a5aec2;
+}
+
+.menu-btn {
+  background: transparent;
+  color: #000;
+}
+.menu-btn .fa-bars {
+  font-size: 25px;
 }
 
 a, button {
@@ -269,11 +299,37 @@ button {
 .intro {
   height: 100vh;
 }
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+  .intro {
+    height: auto;
+  }
+}
 
 .img-bg {
   height: 80vh;
   background: url("../img/intro-bg.png") 50% 0 no-repeat;
   background-size: cover;
+}
+@media (max-width: 767px) {
+  .img-bg {
+    height: 65vh;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .img-bg {
+    height: 53vh;
+  }
+}
+@media only screen and (max-height: 545px) and (max-width: 479px) {
+  .img-bg {
+    height: 48vh;
+  }
+}
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+  .img-bg {
+    height: auto;
+    padding-bottom: 60px;
+  }
 }
 .img-bg > .container {
   height: 70%;
@@ -284,6 +340,11 @@ button {
   -webkit-align-items: center;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .img-bg > .container {
+    height: auto;
+  }
+}
 
 .intro-content {
   text-align: center;
@@ -293,9 +354,14 @@ button {
   color: #017dfb;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 479px) {
+  .intro-content p {
+    margin-bottom: 25px;
+  }
+}
 
 h1 {
-  font: 95px "Molle", serif;
+  font: 11vw "Molle", serif;
   color: #017dfb;
 }
 
@@ -307,12 +373,43 @@ h1 {
   -webkit-align-items: center;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .form-block {
+    height: 35vh;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .form-block {
+    height: 47vh;
+  }
+}
+@media only screen and (max-height: 545px) and (max-width: 479px) {
+  .form-block {
+    height: 51vh;
+  }
+}
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+  .form-block {
+    height: auto;
+    padding: 35px 0;
+  }
+}
 
 form {
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+}
+@media (max-width: 767px) {
+  form {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
 }
 
 .inputs-list {
@@ -325,8 +422,40 @@ form {
   -webkit-align-items: center;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .inputs-list {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: auto;
+    margin: 0 0 2%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .inputs-list {
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+}
 .inputs-list li {
   width: 12%;
+}
+@media (max-width: 991px) {
+  .inputs-list li {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .inputs-list li {
+    width: 23%;
+    margin: 0 2% 2% 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .inputs-list li {
+    width: 47%;
+  }
 }
 .inputs-list span {
   padding-left: 25px;
