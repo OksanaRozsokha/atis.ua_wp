@@ -1,0 +1,68 @@
+.popular-hotels {
+  padding: 100px 0 80px;
+  text-align: center;
+  h2 {
+    color: $grey-text;
+    margin-bottom: 80px;
+  }
+}
+.hotels-list {
+  .img-wrap {
+    height: 30vh;
+    background: $grey-bg;
+    text-indent: -9999px;
+  }
+  & > li {
+    margin-bottom: 55px;
+  }
+  h3 {
+    @include roboto-reg(18px);
+    color: $grey-text;
+  }
+}
+.shadow-wrap {
+  @include box-shadow(0 0 65px rgba(163, 163, 163, 0.25));
+}
+.description {
+  @include display-flex;
+  @include justify-content(space-between);
+  padding: 20px 20px 0;
+}
+.stars-list {
+  margin-top: 5px;
+  li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 1px;
+    @include small-bg("../img/star.png");
+    text-indent: -9999px;
+  }
+}
+.flex-left-item {
+  text-align: left;
+}
+.flex-right-item {
+  text-align: center;
+}
+.price-item {
+  display: block;
+  @include roboto-reg(36px);
+  font-weight: 100;
+  color: $grey-text;
+}
+.days-item {
+  display: block;
+  line-height: 0;
+  margin-top: 5px;
+  font-size: 14px;
+  opacity: 0.3;
+}
+.hotel-btn {
+  position: relative;
+  bottom: -25px;
+  left: 30%;
+  @include transform(translateX(-50%));
+  @include box-shadow(0 0 65px rgba(163, 163, 163, 0.25));
+
+}

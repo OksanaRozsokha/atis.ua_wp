@@ -1,0 +1,19 @@
+.main-footer {
+  padding: 75px 0 65px;
+  text-align: center;
+  .logo {
+    @include molle-font(36px);
+    margin-bottom: 30px;
+  }
+}
+.footer-content {
+  margin: 0 auto;
+  color: $grey-footer;
+  .small-link {
+    color: $grey-footer;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

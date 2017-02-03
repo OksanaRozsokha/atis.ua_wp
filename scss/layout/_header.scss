@@ -1,0 +1,49 @@
+.main-header {
+  padding-top: 45px;
+  .container {
+    @media (max-width: 991px) {
+      position: relative;
+      padding-bottom: 55px;
+    }
+  }
+}
+.popup-btn {
+  @media (max-width: 991px) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+.flex-header {
+  @include display-flex;
+  @include justify-content(space-between);
+  @include align-items(center);
+}
+.flex-right {
+  @include display-flex;
+  @include justify-content(space-between);
+  @include align-items(baseline);
+  width: 80%;
+  @media (max-width: 991px) {
+    width: auto;
+  }
+}
+.main-nav {
+   width: 78%;
+}
+.menu-list {
+  @include display-flex;
+  @include justify-content(space-between);
+  li {
+    margin-right: 2%;
+    @include transition-duration(0.3s);
+    &:hover a {
+      color: $bright-blue;
+    }
+  }
+  a {
+    color: $grey-blue;
+
+  }
+}
+

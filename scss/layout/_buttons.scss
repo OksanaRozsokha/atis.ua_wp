@@ -1,0 +1,80 @@
+a {
+  @include transition-duration(0.3s);
+}
+a:hover {
+  outline: none;
+  text-decoration: none;
+}
+a:active {
+  @extend a:hover;
+}
+a:visited {
+  @extend a:hover;
+}
+a:link {
+  @extend a:hover;
+}
+button {
+  @extend a;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+.padding-btn {
+  padding: 15px 40px;
+  @media (max-width: 1199px) {
+    padding: 15px 20px;
+  }
+}
+.border-radius {
+  @include border-radius(40px);
+}
+
+.background-btn {
+  background: $white;
+}
+.shadow-btn {
+  @include box-shadow(0 0 65px 0 rgba(1, 125, 251, 0.25));
+}
+
+.color-btn {
+  color: $bright-blue;
+}
+.hover-btn:hover {
+  background: $bright-blue;
+  color: $white;
+  border-color: transparent;
+}
+.transparent-bg {
+  background: transparent;
+}
+.small-padding {
+  padding: 10px 20px;
+}
+.hover-white:hover {
+  background: $white;
+  color: $bright-blue;
+}
+.text-btn {
+  @include roboto-bold(12px);
+  color: $white;
+}
+.border-btn {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+.grey-color {
+  color: $light-grey;
+}
+.grey-border {
+  border: 2px solid $light-grey;
+}
+a{
+  &.size-btn {
+    @media (max-width: 964px) {
+      font-size: 16px;
+    }
+    @include respond-to(handhelds) {
+      font-size: 12px;
+    }
+  }
+}

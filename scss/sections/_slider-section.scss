@@ -1,0 +1,39 @@
+.slider-section {
+  padding: 320px 0 260px;
+  @include section-bg("../img/slider-bg.png");
+}
+.slider-list  {
+  li {
+    text-align: center;
+    color: $white;
+  }
+  h2 {
+    max-width: 845px;
+    @include roboto-bold(90px);
+    text-transform: inherit;
+    margin: 0 auto 40px;
+  }
+  p {
+    max-width: 750px;
+    font-size: 18px;
+    line-height: 48px;
+    margin: 0 auto 25px;
+  }
+}
+blockquote {
+  margin-bottom: 40px;
+}
+cite {
+  @include roboto-bold(18px);
+  .blockquote-link {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.pretty-word {
+  @include streetwear-font(75px);
+  color: $light-blue;
+}

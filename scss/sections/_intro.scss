@@ -1,0 +1,105 @@
+.intro {
+  height: 100vh;
+
+}
+
+.img-bg {
+  height: 80vh;
+  @include section-bg("../img/intro-bg.png");
+  & > .container {
+    height: 70%;
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+
+  }
+}
+.intro-content {
+  text-align: center;
+  p {
+    margin-bottom: 50px;
+    color: $bright-blue;
+    text-transform: uppercase;
+  }
+}
+h1 {
+  @include molle-font(95px);
+  color: $bright-blue;
+}
+.form-block {
+  height: 16vh;
+  background: $bright-blue;
+  @include display-flex;
+  @include align-items(center);
+}
+form {
+  @include display-flex;
+  @include justify-content(space-between);
+}
+.inputs-list {
+  width: 95%;
+  margin-right: 2%;
+  @include display-flex;
+  @include justify-content(space-between);
+  @include align-items(center);
+  li {
+    width: 12%;
+  }
+  span {
+    padding-left: 25px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+input {
+  width: 100%;
+  display: block;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  color: $white;
+  outline: none;
+  @include transition-duration(0.3s);
+}
+label {
+  color: $white;
+}
+.form-btn {
+  width: 50px;
+  height: 50px;
+  background-color: $white;
+  @include small-bg("../img/search-icon.png");
+  background-color: $white;
+  text-indent: -9999px;
+  cursor: pointer;
+  @include transition-duration(0.3s);
+  @include  box-shadow(0 0 45px rgba(205, 205, 205, 0.85));
+  &:hover {
+    background-color: rgba(0, 0, 0, .8);
+  }
+}
+.city-item:before {
+  @include small-bg("../img/marker-icon.png");
+}
+.check-item:before {
+  @include small-bg("../img/check-in-icon.png");
+}
+.rooms-item:before {
+  @include small-bg("../img/house-icon.png");
+}
+.adults-item:before {
+  @include small-bg("../img/adults-icon.png");
+}
+.children-item:before {
+  @include small-bg("../img/children-icon.png");
+}
+.star-item:before {
+  @include small-bg("../img/star-icon.png");
+}
