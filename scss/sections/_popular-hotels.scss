@@ -8,22 +8,27 @@
 }
 .hotels-list {
   .img-wrap {
-    height: 30vh;
+    height: 215px;
     background: $grey-bg;
     text-indent: -9999px;
   }
-  & > li {
+  & > li {    
+    position: relative;   
     margin-bottom: 55px;
+    @media (min-width: 400px) and (max-width: 575px) {
+      padding: 0 20%;
+    }
   }
   h3 {
     @include roboto-reg(18px);
     color: $grey-text;
   }
 }
-.shadow-wrap {
+.shadow-wrap {  
   @include box-shadow(0 0 65px rgba(163, 163, 163, 0.25));
 }
 .description {
+  height: 145px;
   @include display-flex;
   @include justify-content(space-between);
   padding: 20px 20px 0;
@@ -59,9 +64,9 @@
   opacity: 0.3;
 }
 .hotel-btn {
-  position: relative;
-  bottom: -25px;
-  left: 30%;
+  position: absolute;
+  bottom: -7%;
+  left: 50%;
   @include transform(translateX(-50%));
   @include box-shadow(0 0 65px rgba(163, 163, 163, 0.25));
 

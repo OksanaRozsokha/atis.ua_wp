@@ -28,7 +28,7 @@ button {
   }
 }
 .padding-btn {
-  padding: 15px 40px;
+  padding: 15px 30px;
   @media (max-width: 1199px) {
     padding: 15px 20px;
   }
@@ -67,6 +67,9 @@ button {
   color: $white;
 }
 .border-btn {
+  border: 1px solid $white;
+}
+.border-opacity {
   border: 2px solid rgba(255, 255, 255, 0.35);
 }
 .grey-color {

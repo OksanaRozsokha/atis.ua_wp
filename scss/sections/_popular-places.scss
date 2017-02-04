@@ -12,7 +12,7 @@
   @include justify-content(space-between);
   @include flex-wrap(wrap);
   @media (max-width: 767px) {
-   @include flex-direction(column);
+    @include flex-direction(column);
   }
   @include respond-to(wide-handhelds) {
     padding: 0 40px;
@@ -20,12 +20,13 @@
   li {
     position: relative;
   }
+
   & > li {
     margin-bottom: 1.6%;
     &:first-child {
       width: 28%;
       @media (max-width: 767px) {
-      width: 100%;
+        width: 100%;
       }
     }
     &:nth-child(2) {
@@ -63,13 +64,33 @@
   @include display-flex;
   @include flex-direction(column);
   @include justify-content(space-between);
-  li {
+  & > li {
     @media (max-width: 767px) {
       width: 100%;
     }
     &:first-child {
       @media (max-width: 767px) {
         margin-bottom: 1.6%;
+      }
+    }
+  }
+  .buttons-list {
+    @media (min-width: 768px) and (max-width: 1176px) {
+      margin-top: 10px;
+    }
+    li {
+      @media (min-width: 768px) and (max-width: 1176px) {
+        margin: 0 5px 5px 0;
+      }
+    }
+    .small-padding {
+      @media (min-width: 768px) and (max-width: 1176px) {
+        padding: 5px 5px;
+      }
+    }
+    h3 {
+      @media (min-width: 768px) and (max-width: 1176px) {
+        font-size: 24px;
       }
     }
   }
@@ -86,7 +107,9 @@
   left: 0;
   padding: 15px;
   @include display-flex;
-  @include align-items(flex-end);
+  @include align-items(flex-start);
+  @include justify-content(flex-end);
+  @include flex-direction(column);
 }
 h3 {
   @include roboto-bold(36px);
@@ -103,21 +126,37 @@ h3 {
   left: 0;
   padding: 15px;
   @include display-flex;
-  @include justify-content(center);
+  @include align-items(flex-start);
+  @include justify-content(flex-end);
   @include flex-direction(column);
-  @include align-items(center);
   h3 {
     @include roboto-bold(60px);
-    margin-bottom: 25px;
     @media (max-width: 991px) {
       font-size: 40px;
     }
   }
 }
 .buttons-list {
+  display: none;
+  margin-top: 20px;
+  @include transition-duration(0.3s);
   li {
     display: inline-block;
     margin-right: 15px;
     margin-bottom: 15px;
+  }
+}
+.hover-item:hover {
+  .block-hover {
+    @include justify-content(center);
+    @include align-items(center);
+    //background: rgba(1, 158, 252, .7);
+  }
+  .big-hover {
+    @include justify-content(center);
+    @include align-items(center);
+  }
+  .buttons-list {
+    display: block;
   }
 }
