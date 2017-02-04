@@ -1,9 +1,17 @@
 .main-header {
+  .padding-btn {
+    @include respond-to(handhelds){
+      padding: 10px 15px;
+    }
+  }
   padding-top: 45px;
   .container {
     @media (max-width: 991px) {
       position: relative;
-      padding-bottom: 55px;
+      padding-bottom: 65px;
+    }
+    @include respond-to(handhelds){
+      padding-bottom: 20px;
     }
   }
 }
@@ -12,6 +20,13 @@
     position: absolute;
     left: 0;
     bottom: 0;
+  }
+  @include respond-to(handhelds){
+    left: 59%;
+    top: 0;
+    bottom: inherit;
+    @include transform(translateX(-50%));
+    font-size: 14px;
   }
 }
 .flex-header {
@@ -30,6 +45,7 @@
 }
 .main-nav {
    width: 78%;
+
 }
 .menu-list {
   @include display-flex;
@@ -44,6 +60,13 @@
   a {
     color: $grey-blue;
 
+  }
+}
+.menu-btn {
+  background: transparent;
+  color: $black;
+  .fa-bars {
+    font-size: 25px;
   }
 }
 

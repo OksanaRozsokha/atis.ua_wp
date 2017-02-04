@@ -14,25 +14,33 @@
 
 </head>
 <body>
+<!-------------------POPUP-------------------------->
 
-<!-- Pushy Menu -->
-<nav class="pushy pushy-left">
-    <ul>
-        <!-- Submenu -->
-        <li class="pushy-link"><a href="#">Home</a></li>
-        <li class="pushy-link"><a href="#">Portfolio</a></li>
-        <li class="pushy-link"><a href="#">Blog</a></li>
-        <li class="pushy-link"><a href="#">About us</a></li>
-        <li class="pushy-link"><a href="#">Contact</a></li>
-    </ul>
-</nav>
+    <div class="wrap-popup">
+        <div class="flex-popup">
+            <div class="popup">
+                <button id="close-popup" ><i class="fa fa-times" aria-hidden="true"></i></button>
+                <h2>Welcome to Greece! It`s very fun here.</h2>
+                <img class="img-fluid rounded" src="img/popup-img.jpg" alt="">
+            </div>
+        </div>
+    </div>
 
-<!-- Site Overlay -->
-<div class="site-overlay"></div>
+<!----------------------END-POPUP-------------------------->
 
-<!--  Content -->
-<div id="container">
+<!----------------MENU-ON-CLICK--------------------->
 
+    <nav class="menu-wrap">
+        <ul class="menu-items">
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Restaurants</a></li>
+            <li><a href="#">Things to do</a></li>
+            <li><a href="#">About Greece</a></li>
+        </ul>
+    </nav>
+<!----------------------------------------------------->
 
     <!-----------------------INTRO-SECTION----------------->
 
@@ -56,7 +64,7 @@
                                     <li><a href="#">Things to do</a></li>
                                     <li><a href="#">About Greece</a></li>
                                 </ul>
-                                <button class="menu menu-btn hidden-lg-up">menu</button>
+                                <button class="menu-btn hidden-lg-up"><i class="fa fa-bars" aria-hidden="true"></i></button>
                             </nav>
                             <button class="popup-btn padding-btn background-btn border-radius shadow-btn color-btn hover-btn">Become a host</button>
                         </div>
@@ -68,7 +76,7 @@
             <div class="container">
                 <div class="intro-content">
                     <h1>Greece</h1>
-                    <p>Welcome <span class="margin-word">to</span>to heaven</p>
+                    <p>Welcome <span class="margin-word">to</span>heaven</p>
                     <a class="background-btn border-radius padding-btn color-btn hover-btn" href="#">Check offer</a>
                 </div>
             </div>
@@ -114,24 +122,71 @@
         <ul class="places-gallery">
             <li>
                 <ul class="double-photo">
-                    <li>
+                    <li class="hover-item">
                         <img src="img/first-place-photo.png" alt="">
                         <div class="block-hover">
                             <h3>Thessaloniki</h3>
+                            <ul class="buttons-list">
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">11 Flights</button></li>
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">48 Restaurants</button></li>
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">32 Hotels</button></li>
+                            </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="hover-item">
                         <img src="img/second-place-photo.png" alt="">
                         <div class="block-hover">
                             <h3>Halkidiki</h3>
+                            <ul class="buttons-list">
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">11 Flights</button></li>
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">48 Restaurants</button></li>
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">32 Hotels</button></li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="hover-item">
                 <img class="img-fluid" src="img/third-place-photo.png" alt="">
                 <div class="big-hover">
                     <h3>Crete</h3>
+                    <ul class="buttons-list">
+                        <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-opacity">11 Flights</button></li>
+                        <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-opacity">48 Restaurants</button></li>
+                        <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-opacity">32 Hotels</button></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <ul class="double-photo">
+                    <li class="hover-item">
+                        <img src="img/fourth-place-photo.png" alt="">
+                        <div class="block-hover">
+                            <h3>Athens</h3>
+                            <ul class="buttons-list">
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">11 Flights</button></li>
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">48 Restaurants</button></li>
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">32 Hotels</button></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="hover-item">
+                        <img src="img/fifth-place-photo.png" alt="">
+                        <div class="block-hover">
+                            <h3>Mykonos</h3>
+                            <ul class="buttons-list">
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">11 Flights</button></li>
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">48 Restaurants</button></li>
+                                <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">32 Hotels</button></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="hover-item">
+                <img class="img-fluid" src="img/sixth-place-photo.png" alt="">
+                <div class="block-hover">
+                    <h3>Meteora</h3>
                     <ul class="buttons-list">
                         <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">11 Flights</button></li>
                         <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">48 Restaurants</button></li>
@@ -139,32 +194,15 @@
                     </ul>
                 </div>
             </li>
-            <li>
-                <ul class="double-photo">
-                    <li>
-                        <img src="img/fourth-place-photo.png" alt="">
-                        <div class="block-hover">
-                            <h3>Athens</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/fifth-place-photo.png" alt="">
-                        <div class="block-hover">
-                            <h3>Mykonos</h3>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <img class="img-fluid" src="img/sixth-place-photo.png" alt="">
-                <div class="block-hover">
-                    <h3>Meteora</h3>
-                </div>
-            </li>
-            <li>
+            <li class="hover-item">
                 <img class="img-fluid" src="img/seventh-place-photo.png" alt="">
                 <div class="block-hover">
                     <h3>Myrtos Beach</h3>
+                    <ul class="buttons-list">
+                        <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">11 Flights</button></li>
+                        <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">48 Restaurants</button></li>
+                        <li><button class="border-radius transparent-bg small-padding hover-white text-btn border-btn">32 Hotels</button></li>
+                    </ul>
                 </div>
             </li>
         </ul>
@@ -394,7 +432,7 @@
     </footer>
     <!------------------------------END-FOOTER------------------------------>
 
-</div>
+
 <!----end--id="content"----------------->
 <script src="js/lib/jquery-3.1.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>

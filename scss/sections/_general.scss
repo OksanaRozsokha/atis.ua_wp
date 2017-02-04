@@ -1,10 +1,8 @@
 html, body{
-  overflow-x: hidden;
   height: 100%;
-  -webkit-overflow-scrolling: touch;
 }
 body {
-  padding: 30px;
+  padding: 2vh 2vw;
   @include roboto-reg(16px);
   @include display-flex;
   @include flex-direction(column);
