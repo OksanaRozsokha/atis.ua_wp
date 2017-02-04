@@ -73,9 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   src: url("../fonts/streetwear/Streetwear.ttf") format("truetype"), url("../fonts/streetwear/Streetwear.woff") format("WOFF");
 }
 html, body {
-  overflow-x: hidden;
   height: 100%;
-  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -104,6 +102,100 @@ h2 {
 
 .margin-word {
   margin: 0 15px;
+}
+
+.wrap-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+}
+
+.flex-popup {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+  .flex-popup {
+    height: auto;
+    padding: 5% 0;
+  }
+}
+
+.popup {
+  position: relative;
+  width: 65%;
+  padding: 35px;
+  background: #fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.popup h2 {
+  font-size: 5vw;
+  color: #017dfb;
+  margin-bottom: 20px;
+}
+
+#close-popup {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  background: transparent;
+  float: right;
+  border: none;
+}
+
+.fa-times {
+  font-size: 20px;
+}
+
+.active {
+  overflow: hidden;
+}
+
+.menu-wrap {
+  width: 50%;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.menu-items {
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.menu-items li {
+  margin-bottom: 10%;
+}
+.menu-items a, .menu-items button {
+  color: #fff;
+  font-size: 18px;
+}
+.menu-items:hover {
+  color: #0dcfff;
 }
 
 .main-header {
@@ -208,15 +300,20 @@ a, button {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-
 a:hover, a:active, button:active, a:visited, button:visited, a:link, button:link, button:hover {
-  outline: none;
   text-decoration: none;
 }
 
 button {
   display: inline-block;
   border: none;
+  outline: none;
+  cursor: pointer;
+}
+button:active {
+  outline: none;
+}
+button:focus {
   outline: none;
 }
 
@@ -787,9 +884,14 @@ h3 {
 }
 .slider-list h2 {
   max-width: 845px;
-  font: 90px "roboto-bold", sans-serif;
+  font: 14vmin "roboto-bold", sans-serif;
   text-transform: inherit;
   margin: 0 auto 40px;
+}
+@media (max-width: 767px) {
+  .slider-list h2 {
+    margin-bottom: 20px;
+  }
 }
 .slider-list p {
   max-width: 750px;
@@ -814,7 +916,7 @@ cite .blockquote-link:hover {
 }
 
 .pretty-word {
-  font: 75px "streetwear", serif;
+  font: 11vmin "streetwear", serif;
   color: #0dcfff;
 }
 

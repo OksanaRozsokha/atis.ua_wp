@@ -9,9 +9,12 @@
   }
   h2 {
     max-width: 845px;
-    @include roboto-bold(90px);
+    font: 14vmin "roboto-bold", sans-serif;
     text-transform: inherit;
     margin: 0 auto 40px;
+    @media  (max-width: 767px) {
+      margin-bottom: 20px;
+    }
   }
   p {
     max-width: 750px;
@@ -34,6 +37,6 @@ cite {
   }
 }
 .pretty-word {
-  @include streetwear-font(75px);
+  font: 11vmin "streetwear", serif;
   color: $light-blue;
 }
