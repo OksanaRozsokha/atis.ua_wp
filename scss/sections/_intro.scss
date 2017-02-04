@@ -3,6 +3,11 @@
   @media only screen and  (max-device-width : 767px) and (orientation : landscape) {
     height: auto;
   }
+  .padding-btn {
+    @include respond-to(handhelds){
+      padding: 10px 15px;
+    }
+  }
 }
 
 .img-bg {
@@ -47,7 +52,7 @@ h1 {
   color: $bright-blue;
 }
 .form-block {
-  height: 16vh;
+  height: 18vh;
   background: $bright-blue;
   @include display-flex;
   @include align-items(center);

@@ -405,6 +405,11 @@ button:focus {
     height: auto;
   }
 }
+@media only screen and (max-width: 479px) {
+  .intro .padding-btn {
+    padding: 10px 15px;
+  }
+}
 
 .img-bg {
   height: 80vh;
@@ -467,7 +472,7 @@ h1 {
 }
 
 .form-block {
-  height: 16vh;
+  height: 18vh;
   background: #017dfb;
   display: -webkit-flex;
   display: flex;
