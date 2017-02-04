@@ -1,0 +1,28 @@
+.menu-wrap {
+  width: 50%;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, .9);
+}
+.menu-items {
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  li {
+    margin-bottom: 10%;
+  }
+  a {
+    color: $white;
+    font-size: 18px;
+  }
+  &:hover {
+    color: $light-blue;
+  }
+}
