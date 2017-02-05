@@ -1,0 +1,26 @@
+html, body{
+  height: 100%;
+}
+body {
+  padding: 2vh 2vw;
+  @include roboto-reg(16px);
+  @include display-flex;
+  @include flex-direction(column);
+}
+
+//footer pressing
+.main {
+  text-indent: -9999px;
+  @include flex(1 0 auto);
+}
+footer {
+  @include flex(0 0 auto);
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.margin-word {
+  margin: 0 15px;
+}
